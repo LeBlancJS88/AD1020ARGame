@@ -1,0 +1,56 @@
+{
+    "name": "touchinput",
+    "maps": [
+        {
+            "name": "TouchInput",
+            "id": "db196960-5bd8-4f47-9fb6-e5193e738f57",
+            "actions": [
+                {
+                    "name": "SingleTap",
+                    "type": "Button",
+                    "id": "a946dd52-6a82-4899-8038-00d7063c68e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "ddaa550d-ed03-4493-8646-ad148a0b37b6",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SingleTap",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "7409f7e4-8c08-4514-92cb-82e70e070165",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SingleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "ed302ca2-f11c-4806-8eda-3eddb9076871",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SingleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
