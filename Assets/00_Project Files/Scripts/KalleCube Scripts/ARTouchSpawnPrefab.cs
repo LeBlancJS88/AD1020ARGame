@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-public class TouchInput : MonoBehaviour
+public class ARTouchSpawnPrefab : MonoBehaviour
 {
     [SerializeField] private TMP_Text debugText; 
     [SerializeField] private GameObject ballPrefab; 
