@@ -1,26 +1,26 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
-    private int sceneToLoad = -1; // Default to an invalid scene index
+    public static int sceneToLoad = -1;
 
-    // Method to be called by the UISceneSelector when a scene is selected
-    public void SetSceneToLoad(int index)
+    public void SetSceneToLoad()
     {
-        sceneToLoad = index;
+        // This method now uses the static property directly
+        Debug.Log("Setting scene to load: " + sceneToLoad);
     }
 
-    // Method to be called by the Load button to load the selected scene
     public void LoadScene()
     {
-        if (sceneToLoad >= 0) // Check if a valid scene has been selected
+        if (sceneToLoad >= 0)
         {
+            Debug.Log("Loading scene with index: " + sceneToLoad);
             SceneManager.LoadScene(sceneToLoad);
         }
         else
         {
-            Debug.LogWarning("No scene has been selected to load!");
+            Debug.LogWarning("Attempted to load a scene but no scene was set to load.");
         }
     }
 }

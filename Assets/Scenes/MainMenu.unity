@@ -1388,7 +1388,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!1 &717722465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1851,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!1 &826439683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,7 +2594,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!1 &1165339495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +2985,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2128728091}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: SetSceneToLoad
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3967,7 +3967,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!1 &1999089386
 GameObject:
   m_ObjectHideFlags: 0
