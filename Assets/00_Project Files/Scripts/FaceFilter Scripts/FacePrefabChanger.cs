@@ -14,7 +14,7 @@ public class FacePrefabChanger : MonoBehaviour
 
     private void Start()
     {
-        simpleScrollSnap.OnPanelSelected.AddListener(ChangeFacePrefab);
+        simpleScrollSnap.OnPanelCentered.AddListener((previousPanelIndex, newPanelIndex) => {ChangeFacePrefab(newPanelIndex);});
     }
 
     private void ChangeFacePrefab(int panelIndex)
@@ -41,43 +41,3 @@ public class FacePrefabChanger : MonoBehaviour
         }
     }
 }
-
-
-    //public void ChangeFacePrefab(int panelIndex)
-    //{
-    //    Debug.Log("Panel selected: " + panelIndex);
-
-    //    // Ensure panelIndex is within bounds of the facePrefabs array
-    //    if (panelIndex >= 0 && panelIndex < facePrefabs.Length)
-    //    {
-    //        // Retrieve the new prefab GameObject
-    //        GameObject newFacePrefab = facePrefabs[panelIndex];
-
-    //        // Check if the new prefab has a MeshRenderer and get its material
-    //        Material newFaceMaterial = null;
-    //        MeshRenderer prefabRenderer = newFacePrefab.GetComponent<MeshRenderer>();
-    //        if (prefabRenderer != null)
-    //        {
-    //            newFaceMaterial = prefabRenderer.sharedMaterial;
-    //        }
-    //        else
-    //        {
-    //            Debug.LogError("New face prefab does not have a MeshRenderer component.");
-    //            return;
-    //        }
-
-    //        // Update the material on all tracked faces
-    //        foreach (ARFace face in arFaceManager.trackables)
-    //        {
-    //            MeshRenderer faceRenderer = face.GetComponent<MeshRenderer>();
-    //            if (faceRenderer != null)
-    //            {
-    //                faceRenderer.material = newFaceMaterial;
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Panel index out of bounds.");
-    //    }
-    //}
