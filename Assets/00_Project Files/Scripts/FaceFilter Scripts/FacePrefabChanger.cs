@@ -1,39 +1,39 @@
 using UnityEngine;
-using DanielLochner.Assets.SimpleScrollSnap;
 using UnityEngine.XR.ARFoundation;
 using System.Collections.Generic;
 
 public class FacePrefabChanger : MonoBehaviour
 {
-    public SimpleScrollSnap simpleScrollSnap;
     public ARFaceManager arFaceManager;
-    public GameObject[] facePrefabs; // Directly drag your face prefabs here in the inspector
-
     private List<GameObject> instantiatedFaceFilters = new List<GameObject>();
 
-    private void Start()
+    // Call this method from your button press events
+    public void ChangeFacePrefab(GameObject newFaceFilterPrefab)
     {
-        simpleScrollSnap.OnPanelCentered.AddListener((previousPanelIndex, newPanelIndex) => { ChangeFacePrefab(newPanelIndex); });
-    }
-
-    private void ChangeFacePrefab(int newPanelIndex)
-    {
-        // Deactivate previous face filters
+        // Deactivate and destroy previous face filters
         foreach (GameObject faceFilter in instantiatedFaceFilters)
         {
             Destroy(faceFilter);
         }
         instantiatedFaceFilters.Clear();
 
-        // Instantiate the new face filter
-        if (newPanelIndex >= 0 && newPanelIndex < facePrefabs.Length)
+        // Check if there are any faces to attach the filter to
+        if (arFaceManager.trackables.count > 0)
         {
-            GameObject newFaceFilterPrefab = facePrefabs[newPanelIndex];
             foreach (ARFace face in arFaceManager.trackables)
             {
+                // Instantiate the new face filter as a child of the ARFace
                 GameObject instantiatedFilter = Instantiate(newFaceFilterPrefab, face.transform);
+                instantiatedFilter.transform.localPosition = Vector3.zero;
+                instantiatedFilter.transform.localRotation = Quaternion.identity;
+                instantiatedFilter.transform.localScale = Vector3.one;
+
                 instantiatedFaceFilters.Add(instantiatedFilter);
             }
+        }
+        else
+        {
+            Debug.LogWarning("No ARFaces detected.");
         }
     }
 }
