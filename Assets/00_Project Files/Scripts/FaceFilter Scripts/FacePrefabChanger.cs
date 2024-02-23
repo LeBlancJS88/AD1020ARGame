@@ -1,83 +1,39 @@
 using UnityEngine;
-using DanielLochner.Assets.SimpleScrollSnap;
 using UnityEngine.XR.ARFoundation;
 using System.Collections.Generic;
 
 public class FacePrefabChanger : MonoBehaviour
 {
-    public SimpleScrollSnap simpleScrollSnap;
     public ARFaceManager arFaceManager;
-    public GameObject[] facePrefabs;
-
-    // List to keep track of all instantiated face filter GameObjects
     private List<GameObject> instantiatedFaceFilters = new List<GameObject>();
 
-    private void Start()
+    // Call this method from your button press events
+    public void ChangeFacePrefab(GameObject newFaceFilterPrefab)
     {
-        simpleScrollSnap.OnPanelSelected.AddListener(ChangeFacePrefab);
-    }
-
-    private void ChangeFacePrefab(int panelIndex)
-    {
-        // Deactivate all current face filter GameObjects
+        // Deactivate and destroy previous face filters
         foreach (GameObject faceFilter in instantiatedFaceFilters)
         {
-            faceFilter.SetActive(false); // Or Destroy(faceFilter) if you prefer
+            Destroy(faceFilter);
         }
-        instantiatedFaceFilters.Clear(); // Clear the list
+        instantiatedFaceFilters.Clear();
 
-        // Instantiate and set up the new face filter GameObjects
-        if (panelIndex >= 0 && panelIndex < facePrefabs.Length)
+        // Check if there are any faces to attach the filter to
+        if (arFaceManager.trackables.count > 0)
         {
-            GameObject newFaceFilterPrefab = facePrefabs[panelIndex];
             foreach (ARFace face in arFaceManager.trackables)
             {
+                // Instantiate the new face filter as a child of the ARFace
                 GameObject instantiatedFilter = Instantiate(newFaceFilterPrefab, face.transform);
                 instantiatedFilter.transform.localPosition = Vector3.zero;
                 instantiatedFilter.transform.localRotation = Quaternion.identity;
                 instantiatedFilter.transform.localScale = Vector3.one;
-                instantiatedFaceFilters.Add(instantiatedFilter); // Add to the list
+
+                instantiatedFaceFilters.Add(instantiatedFilter);
             }
+        }
+        else
+        {
+            Debug.LogWarning("No ARFaces detected.");
         }
     }
 }
-
-
-    //public void ChangeFacePrefab(int panelIndex)
-    //{
-    //    Debug.Log("Panel selected: " + panelIndex);
-
-    //    // Ensure panelIndex is within bounds of the facePrefabs array
-    //    if (panelIndex >= 0 && panelIndex < facePrefabs.Length)
-    //    {
-    //        // Retrieve the new prefab GameObject
-    //        GameObject newFacePrefab = facePrefabs[panelIndex];
-
-    //        // Check if the new prefab has a MeshRenderer and get its material
-    //        Material newFaceMaterial = null;
-    //        MeshRenderer prefabRenderer = newFacePrefab.GetComponent<MeshRenderer>();
-    //        if (prefabRenderer != null)
-    //        {
-    //            newFaceMaterial = prefabRenderer.sharedMaterial;
-    //        }
-    //        else
-    //        {
-    //            Debug.LogError("New face prefab does not have a MeshRenderer component.");
-    //            return;
-    //        }
-
-    //        // Update the material on all tracked faces
-    //        foreach (ARFace face in arFaceManager.trackables)
-    //        {
-    //            MeshRenderer faceRenderer = face.GetComponent<MeshRenderer>();
-    //            if (faceRenderer != null)
-    //            {
-    //                faceRenderer.material = newFaceMaterial;
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("Panel index out of bounds.");
-    //    }
-    //}
