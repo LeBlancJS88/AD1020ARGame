@@ -900,29 +900,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 922934674789398395, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
+      propertyPath: startingPanel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 922934674789398395, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
       propertyPath: onPanelSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 745148254}
-    - target: {fileID: 1487171459311089659, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487171459311089659, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487171459311089659, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487171459311089659, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 2229709907867170410, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
       propertyPath: m_Name
       value: FaceFilters Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4959475448393120468, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a92cfdc3e83094b41857a391d60728d9, type: 3}
     - target: {fileID: 5048773462493025888, guid: 8f4590b49a861b846a6f4ff34a5658fe, type: 3}
       propertyPath: cameraManager
       value: 
