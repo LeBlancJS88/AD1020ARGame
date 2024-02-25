@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaceFilters.unity
     guid: 58702be467793b141b4570ddcb250906
+  - enabled: 1
+    path: Assets/Scenes/InteractiveFilter.unity
+    guid: dadcdd4d30aec2646a377f1a74d19a20
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5f9f3ee2272db294b9c992c48b165ea6, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 820e9e72023f23d489a6d640e4c5f1ae, type: 2}
