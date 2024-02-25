@@ -954,7 +954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kalle Cube
+  m_text: AR Planes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4e3a403527ea13540af5801f56b7eba9, type: 2}
   m_sharedMaterial: {fileID: -6694443337333213032, guid: 4e3a403527ea13540af5801f56b7eba9, type: 2}
