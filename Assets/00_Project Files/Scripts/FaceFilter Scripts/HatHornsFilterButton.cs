@@ -7,7 +7,8 @@ public class HatHornsFilterButton : MonoBehaviour, IFaceFilterButton
 
     private void Start()
     {
-        facePrefabChanger = FindObjectOfType<FacePrefabChanger>(); // Find and store a reference to the FacePrefabChanger script
+        // Find and store a reference to the FacePrefabChanger script
+        facePrefabChanger = FindObjectOfType<FacePrefabChanger>(); 
     }
 
     public void ActivateFaceFilter()

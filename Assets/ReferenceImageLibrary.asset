@@ -21,29 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5745997637573314444
       m_GuidHigh: 2479423720694814361
     m_SerializedTextureGuid:
-      m_GuidLow: 9810004864852561419
-      m_GuidHigh: 14358872482343451352
+      m_GuidLow: 14912617946129620802
+      m_GuidHigh: 2927796804490174809
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Raijonkari Kalle
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 5655553801849974439
-      m_GuidHigh: 17497284053474983067
-    m_SerializedTextureGuid:
-      m_GuidLow: 6824347158584768996
-      m_GuidHigh: 7141233618355836906
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: FlowerPainting
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
-      m_GuidLow: 5479981226933784900
-      m_GuidHigh: 10162385442034351758
-    m_SerializedTextureGuid:
-      m_GuidLow: 2784451638120740930
-      m_GuidHigh: 6521233297223293880
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: SunflowerPainting
+    m_Name: Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway
     m_Texture: {fileID: 0}

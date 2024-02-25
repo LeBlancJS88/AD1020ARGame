@@ -7,6 +7,7 @@ TagManager:
   - catGlasses
   - maskGlasses
   - simpleGlasses
+  - screamPrefab
   layers:
   - Default
   - TransparentFX
