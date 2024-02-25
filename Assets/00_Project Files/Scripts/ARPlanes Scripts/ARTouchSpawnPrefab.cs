@@ -8,7 +8,6 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARTouchSpawnPrefab : MonoBehaviour
 {
-    [SerializeField] private TMP_Text debugText; 
     [SerializeField] private GameObject ballPrefab; 
     private ARRaycastManager arRaycastManager; 
     private List<ARRaycastHit> hits = new List<ARRaycastHit>(); 
@@ -27,9 +26,6 @@ public class ARTouchSpawnPrefab : MonoBehaviour
         {
             // Read touch position
             var touchPos = ctx.ReadValue<Vector2>();
-            
-            // Write to debugText
-            debugText.text = touchPos.ToString(); 
 
             // Perform raycast
             if (arRaycastManager.Raycast(touchPos, hits, trackableTypes))
