@@ -1677,6 +1677,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4942478351854213593, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942478351854213593, guid: 354aeef51132448329e69052b04032bb, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -1976,6 +1980,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5740582964022577089, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5763638295764634502, guid: 354aeef51132448329e69052b04032bb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2059,6 +2067,18 @@ PrefabInstance:
     - target: {fileID: 6048574962280469988, guid: 354aeef51132448329e69052b04032bb, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070415500708160214, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.49769264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070415500708160214, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.2582389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070415500708160214, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 1.0648812
       objectReference: {fileID: 0}
     - target: {fileID: 6096396753504490007, guid: 354aeef51132448329e69052b04032bb, type: 3}
       propertyPath: m_Layer
@@ -2615,6 +2635,18 @@ PrefabInstance:
     - target: {fileID: 9180361164543332316, guid: 354aeef51132448329e69052b04032bb, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222308321722995699, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.55674607
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222308321722995699, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.26028055
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222308321722995699, guid: 354aeef51132448329e69052b04032bb, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.5681578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
