@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 93648793}
   - component: {fileID: 93648792}
   m_Layer: 5
-  m_Name: CookieGame_RawImage
+  m_Name: ARFriend_RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 520, y: 631}
+  m_SizeDelta: {x: 500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93648792
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 897022d6f1e449949bbf537f8e56c550, type: 3}
+  m_Texture: {fileID: 2800000, guid: a774c30fb4be19a4fa4cc47205e7cab9, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 1919727614}
   - component: {fileID: 1919727613}
   m_Layer: 5
-  m_Name: CookieGame_Text (TMP)
+  m_Name: ARFriend_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cookie Eating Game
+  m_text: AR Friend
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4e3a403527ea13540af5801f56b7eba9, type: 2}
   m_sharedMaterial: {fileID: -6694443337333213032, guid: 4e3a403527ea13540af5801f56b7eba9, type: 2}
@@ -1178,19 +1178,19 @@ PrefabInstance:
       objectReference: {fileID: 5638385355200451546}
     - target: {fileID: 3849724597423818780, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849724597423818780, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849724597423818780, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 523.37256
       objectReference: {fileID: 0}
     - target: {fileID: 3849724597423818780, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 5334581814026812542, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1326,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6708861109989538846, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474453019679056530, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1342,19 +1342,19 @@ PrefabInstance:
       objectReference: {fileID: 117299550982395791}
     - target: {fileID: 8888856488824028126, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8888856488824028126, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8888856488824028126, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 523.37256
       objectReference: {fileID: 0}
     - target: {fileID: 8888856488824028126, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -375
       objectReference: {fileID: 0}
     - target: {fileID: 9120005742631043952, guid: e487fad4655efcb4b986023b72411389, type: 3}
       propertyPath: m_Color.a
