@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARPortal.unity
     guid: ef0d3c71cb3000d46b2df964515ccb2a
+  - enabled: 1
+    path: Assets/Scenes/CookieGame.unity
+    guid: a03613dde6b7e2f4aa9662a95b9b90f2
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5f9f3ee2272db294b9c992c48b165ea6, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 820e9e72023f23d489a6d640e4c5f1ae, type: 2}

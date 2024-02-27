@@ -1081,6 +1081,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1979399499}
     - target: {fileID: 901251118723900748, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
+      propertyPath: scenePanels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901251118723900748, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
       propertyPath: scenePanels.Array.data[0]
       value: 
       objectReference: {fileID: 1981564768}
@@ -1096,6 +1100,18 @@ PrefabInstance:
       propertyPath: scenePanels.Array.data[3]
       value: 
       objectReference: {fileID: 673191537}
+    - target: {fileID: 901251118723900748, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
+      propertyPath: scenePanels.Array.data[4]
+      value: 
+      objectReference: {fileID: 1688203520}
+    - target: {fileID: 901251118723900748, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
+      propertyPath: sceneBuildIndices.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 901251118723900748, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
+      propertyPath: sceneBuildIndices.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7844925573463821886, guid: 40788ff3fabbd504b9474287ce767a92, type: 3}
       propertyPath: m_Name
       value: Managers
