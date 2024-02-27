@@ -24,21 +24,22 @@ public class Face : MonoBehaviour
     private List<ARFace> arFaces = new List<ARFace>();
 
     private int mouthUpperIndex = 13;
-    private int mouthLowerIndex = 14;
+    private int mouthLowerIndex = 16;
 
     private bool isMouthOpen = false;
 
-    // Threshold for mouth opening, adjust based on your model scale
+    // Threshold for mouth opening
     private float mouthOpenThreshold = 0.02f;
+    
     private int cookieCount = 0;
 
-    // Keep track of the current cookie instances per face
     private Dictionary<ARFace, GameObject> faceToCookieMap = new Dictionary<ARFace, GameObject>();
 
     private void Start()
     {
         scoreText.text = cookieCount.ToString();
     }
+
     private void Update()
     {
         if (arcamera.currentFacingDirection == CameraFacingDirection.User)
@@ -53,22 +54,20 @@ public class Face : MonoBehaviour
                     face.vertices[mouthLowerIndex]
                 );
 
-                // Check if the cookie instance exists for the current face
                 GameObject cookieInstance;
                 if (faceToCookieMap.TryGetValue(face, out cookieInstance))
                 {
-                    MeshRenderer cookieRenderer = cookieInstance.GetComponent<MeshRenderer>();
+                    // Assuming the cookie model is the first child of the instantiated prefab
+                    MeshRenderer cookieRenderer = cookieInstance.transform.GetChild(0).GetComponent<MeshRenderer>();
 
                     if (mouthDistance > mouthOpenThreshold && !isMouthOpen)
                     {
                         isMouthOpen = true;
-                        // Show the cookie
                         cookieRenderer.enabled = true;
                     }
                     else if (mouthDistance <= mouthOpenThreshold && isMouthOpen)
                     {
                         isMouthOpen = false;
-                        // Hide the cookie
                         cookieRenderer.enabled = false;
                         cookieCount++;
                         scoreText.text = cookieCount.ToString();
@@ -85,13 +84,12 @@ public class Face : MonoBehaviour
             arFaces.Add(newFace);
             AttachHatToHead(newFace);
             AttachMoustacheToLip(newFace);
-            AttachCookieToMouth(newFace); // Now attaching the cookie here
+            AttachCookieToMouth(newFace);
         }
 
         foreach (var removedFace in eventArgs.removed)
         {
             arFaces.Remove(removedFace);
-            // Additionally, remove the cookie when a face is lost
             if (faceToCookieMap.TryGetValue(removedFace, out var cookieInstance))
             {
                 Destroy(cookieInstance);
@@ -116,12 +114,16 @@ public class Face : MonoBehaviour
 
     private void AttachCookieToMouth(ARFace face)
     {
-        Vector3 mouthPos = face.transform.TransformPoint(face.vertices[mouthUpperIndex]);
+        // Calculate the midpoint between the upper and lower mouth vertices
+        Vector3 mouthPos = face.transform.TransformPoint(face.vertices[mouthLowerIndex]);
+
         GameObject cookieInstance = Instantiate(cookiePrefab, mouthPos, Quaternion.identity);
         cookieInstance.transform.parent = face.transform;
-        // Initially hide the cookie
-        cookieInstance.GetComponent<MeshRenderer>().enabled = false;
-        // Map the face to the cookie instance
+
+        // Initially hide the cookie by accessing the MeshRenderer of the first child
+        cookieInstance.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+
+        // Map the face to the cookie instance for tracking
         faceToCookieMap[face] = cookieInstance;
     }
 }
